@@ -47,16 +47,10 @@ local default_chest_lock_christmas = {
 if minetest.get_modpath("default") ~= nil then
 --  default.gui_slots = "listcolors[#00000033;#5A5A5A;#FFFFFF00;#0C021A99;#FFFFFF]"
   
-  minetest.override_item("default:sandstone_block", {
-  	tiles = sandstone_block
-  })
+  minetest.override_item("default:sandstone_block", { tiles = sandstone_block })
   if os.date("%m") == "12" then
-    minetest.override_item("default:chest", {
-    	tiles = default_chest_christmas
-    })
-    minetest.override_item("default:chest_lock", {
-    	tiles = default_chest_lock_christmas
-    })
+    minetest.override_item("default:chest", { tiles = default_chest_christmas })
+    minetest.override_item("default:chest_lock", { tiles = default_chest_lock_christmas })
   end
 end
 
@@ -73,26 +67,14 @@ end
 
 --farming overrides
 if minetest.get_modpath("farming") ~= nil then
-  minetest.override_item("farming:straw", {
-  	tiles = farming_straw
-  })
+  minetest.override_item("farming:straw", { tiles = farming_straw })
 end
 
 --stairs overrides
 if minetest.get_modpath("stairs") ~= nil then
-  minetest.override_item("stairs:slab_stone_block", {
-  	tiles = slab_stone_block
-  })
-  minetest.override_item("stairs:slab_sandstone_block", {
-  	tiles = sandstone_block
-  })
-  minetest.override_item("stairs:stair_sandstone_block", {
-  	tiles = sandstone_block
-  })
-  minetest.override_item("stairs:slab_straw", {
-  	tiles = farming_straw
-  })
-  minetest.override_item("stairs:stair_straw", {
-  	tiles = farming_straw
-  })
+  minetest.override_item("stairs:slab_stone_block", { tiles = slab_stone_block })
+  minetest.override_item("stairs:slab_sandstone_block", { tiles = sandstone_block })
+  minetest.override_item("stairs:stair_sandstone_block", { tiles = sandstone_block })
+  minetest.override_item("stairs:slab_straw", { tiles = farming_straw })
+  minetest.override_item("stairs:stair_straw", { tiles = farming_straw })
 end
