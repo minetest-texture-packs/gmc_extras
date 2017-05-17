@@ -16,6 +16,14 @@ local farming_straw = {
   "farming_straw.png"
 }
 
+local slab_stone_block = {
+  "extras_slab_stone_block_top_bottom.png",
+  "extras_slab_stone_block_top_bottom.png",
+  "extras_slab_stone_block_side.png",
+  "extras_slab_stone_block_side.png",
+  "extras_slab_stone_block_side.png",
+  "extras_slab_stone_block_side.png"
+}
 --default overrides
 if minetest.get_modpath("default") ~= nil then
   minetest.override_item("default:sandstone_block", {
@@ -43,6 +51,9 @@ end
 
 --stairs overrides
 if minetest.get_modpath("stairs") ~= nil then
+  minetest.override_item("stairs:slab_stone_block", {
+  	tiles = slab_stone_block
+  })
   minetest.override_item("stairs:slab_sandstone_block", {
   	tiles = sandstone_block
   })
