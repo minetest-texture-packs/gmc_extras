@@ -27,7 +27,7 @@ local slab_stone_block = {
 
 local default_chest_christmas = {
   "extras_default_chest_christmas_top.png",
-  "extras_default_chest_christmas_top.png",
+  "extras_default_chest_christmas_bottom.png",
   "extras_default_chest_christmas_side.png",
   "extras_default_chest_christmas_side.png",
   "extras_default_chest_christmas_side.png",
@@ -36,7 +36,7 @@ local default_chest_christmas = {
 
 local default_chest_lock_christmas = {
   "extras_default_chest_christmas_top.png",
-  "extras_default_chest_christmas_top.png",
+  "extras_default_chest_christmas_bottom.png",
   "extras_default_chest_christmas_side.png",
   "extras_default_chest_christmas_side.png",
   "extras_default_chest_christmas_side.png",
@@ -45,6 +45,8 @@ local default_chest_lock_christmas = {
 
 --default overrides
 if minetest.get_modpath("default") ~= nil then
+--  default.gui_slots = "listcolors[#00000033;#5A5A5A;#FFFFFF00;#0C021A99;#FFFFFF]"
+  
   minetest.override_item("default:sandstone_block", {
   	tiles = sandstone_block
   })

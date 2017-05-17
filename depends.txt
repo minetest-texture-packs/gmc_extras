@@ -1,2 +1,4 @@
 default
-beds
+beds?
+farming?
+stairs?
