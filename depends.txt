@@ -2,3 +2,4 @@ default
 beds?
 farming?
 stairs?
+anvil?
