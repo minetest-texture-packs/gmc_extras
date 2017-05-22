@@ -84,7 +84,7 @@ if minetest.get_modpath("stairs") ~= nil then
 end
 
 if minetest.get_modpath("carts") ~= nil then
-  minetest.override_item("carts:cart", { inventory_image = "extras_carts_cart_inv.png"})
+  minetest.override_item("carts:cart", { inventory_image = "extras_carts_cart_inv.png" })
 end
 
 if minetest.get_modpath("anvil") ~= nil then
@@ -110,4 +110,7 @@ if minetest.get_modpath("anvil") ~= nil then
   		}
   	}, 
   })
+end
+if minetest.get_modpath("itemframes") ~= nil then
+  minetest.override_item("itemframes:", {	inventory_image = "extras_itemframes_inv.png" })
 end

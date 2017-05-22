@@ -4,3 +4,4 @@ farming?
 stairs?
 anvil?
 carts?
+itemframes?
