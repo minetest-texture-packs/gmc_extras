@@ -83,27 +83,31 @@ if minetest.get_modpath("stairs") ~= nil then
   minetest.override_item("stairs:stair_straw", { tiles = farming_straw })
 end
 
+if minetest.get_modpath("carts") ~= nil then
+  minetest.override_item("carts:cart", { inventory_image = "extras_carts_cart_inv.png"})
+end
+
 if minetest.get_modpath("anvil") ~= nil then
-  --item_displacement = 13/16
-    minetest.override_item("anvil:anvil", {
-      tiles = anvil_anvil,
-    	node_box = {
-    		type = "fixed",
-    		fixed = {
-    			{-0.375, -0.5, -0.375, 0.375, -0.25, 0.375}, -- Base
-    			{-0.3125, -0.5, -0.25, 0.3125, -0.1875, 0.25}, -- PoleBase
-    			{-0.25, -0.1875, -0.125, 0.25, 0.125, 0.125}, -- Pole
-    			{-0.5, 0.125, -0.3125, 0.5, 0.5, 0.3125}, -- Block
-    		}
-    	},
-    	selection_box = {
-    		type = "fixed",
-    		fixed = {
-    			{-0.375, -0.5, -0.375, 0.375, -0.25, 0.375}, -- Base
-    			{-0.3125, -0.5, -0.25, 0.3125, -0.1875, 0.25}, -- PoleBase
-    			{-0.25, -0.1875, -0.125, 0.25, 0.125, 0.125}, -- Pole
-    			{-0.5, 0.125, -0.3125, 0.5, 0.5, 0.3125}, -- Block
-    		}
-    	}, 
-    })
+  anvil_item_displacement = 13/16
+  minetest.override_item("anvil:anvil", {
+    tiles = anvil_anvil,
+  	node_box = {
+  		type = "fixed",
+  		fixed = {
+  			{-0.375, -0.5, -0.375, 0.375, -0.25, 0.375}, -- Base
+  			{-0.3125, -0.5, -0.25, 0.3125, -0.1875, 0.25}, -- PoleBase
+  			{-0.25, -0.1875, -0.125, 0.25, 0.125, 0.125}, -- Pole
+  			{-0.5, 0.125, -0.3125, 0.5, 0.5, 0.3125}, -- Block
+  		}
+  	},
+  	selection_box = {
+  		type = "fixed",
+  		fixed = {
+  			{-0.375, -0.5, -0.375, 0.375, -0.25, 0.375}, -- Base
+  			{-0.3125, -0.5, -0.25, 0.3125, -0.1875, 0.25}, -- PoleBase
+  			{-0.25, -0.1875, -0.125, 0.25, 0.125, 0.125}, -- Pole
+  			{-0.5, 0.125, -0.3125, 0.5, 0.5, 0.3125}, -- Block
+  		}
+  	}, 
+  })
 end
