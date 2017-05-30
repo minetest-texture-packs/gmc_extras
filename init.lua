@@ -1,3 +1,7 @@
+local gmc_extras = {
+  grassy_sides = minetest.setting_getbool("gmc_extras_grassy_sides") or false,
+}
+
 local sandstone_block = {
   "default_sandstone.png",
   "extras_default_sandstone_block_bottom.png",
@@ -5,6 +9,24 @@ local sandstone_block = {
   "extras_default_sandstone_block_side.png",
   "extras_default_sandstone_block_side.png",
   "extras_default_sandstone_block_side.png"
+}
+
+local dirt_with_grass_grassy = {
+  "default_grass.png",
+  "default_dirt.png",
+  "default_grass.png",
+  "default_grass.png",
+  "default_grass.png",
+  "default_grass.png",
+}
+
+local dirt_with_dry_grass_grassy = {
+  "default_dry_grass.png",
+  "default_dirt.png",
+  "default_dry_grass.png",
+  "default_dry_grass.png",
+  "default_dry_grass.png",
+  "default_dry_grass.png",
 }
 
 local farming_straw = {
@@ -55,6 +77,10 @@ if minetest.get_modpath("default") ~= nil then
   if os.date("%m") == "12" then
     minetest.override_item("default:chest", { tiles = default_chest_christmas })
     minetest.override_item("default:chest_lock", { tiles = default_chest_lock_christmas })
+  end
+  if gmc_extras.grassy_sides == true then
+    minetest.override_item("default:dirt_with_grass", { tiles = dirt_with_grass_grassy })
+    minetest.override_item("default:dirt_with_dry_grass", { tiles = dirt_with_dry_grass_grassy })
   end
 end
 
