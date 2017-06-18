@@ -1,5 +1,5 @@
 local gmc_extras = {
-  grassy_sides = minetest.setting_getbool("gmc_extras_grassy_sides") or false,
+  grassy_sides = minetest.settings:get_bool("gmc_extras_grassy_sides") or false,
 }
 
 local sandstone_block = {
@@ -72,7 +72,7 @@ local anvil_anvil = {
 --default overrides
 if minetest.get_modpath("default") ~= nil then
 --  default.gui_slots = "listcolors[#00000033;#5A5A5A;#FFFFFF00;#0C021A99;#FFFFFF]"
-  
+
   minetest.override_item("default:sandstone_block", { tiles = sandstone_block })
   if os.date("%m") == "12" then
     minetest.override_item("default:chest", { tiles = default_chest_christmas })
@@ -84,7 +84,7 @@ if minetest.get_modpath("default") ~= nil then
   end
 end
 
---bed overrides 
+--bed overrides
 if minetest.get_modpath("beds") ~= nil then
   minetest.register_craft({
     output = "beds:bed",
@@ -134,7 +134,7 @@ if minetest.get_modpath("anvil") ~= nil then
   			{-0.25, -0.1875, -0.125, 0.25, 0.125, 0.125}, -- Pole
   			{-0.5, 0.125, -0.3125, 0.5, 0.5, 0.3125}, -- Block
   		}
-  	}, 
+  	},
   })
 end
 if minetest.get_modpath("itemframes") ~= nil then
